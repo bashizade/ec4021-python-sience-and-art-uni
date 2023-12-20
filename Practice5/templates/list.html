@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>list</title>
+    <style>
+        tr,th,td{
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table border="2">
+    <tr>
+        <th>نام</th>
+        <th>ایمیل</th>
+        <th>توضیحات</th>
+        <th>زمان ثبت</th>
+    </tr>
+    {% for contact in contacts %}
+        <tr>
+            <td>{{ contact.fname }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.description }}</td>
+            <td>{{ contact.created_at }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
